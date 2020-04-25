@@ -13,13 +13,13 @@ public class KataTest {
 
     @Test
     public void recoverNumbersTest() {
-        List<Integer> expectedNumber = new ArrayList<>();
-        expectedNumber.add(1);
-        expectedNumber.add(2);
+        List<Integer> expectedNumbers = new ArrayList<>();
+        expectedNumbers.add(1);
+        expectedNumbers.add(2);
 
         List<Integer> actualNumbers = Kata.recoverNumbers("1 2");
 
-        assertTrue(expectedNumber.containsAll(actualNumbers));
+        assertTrue(expectedNumbers.containsAll(actualNumbers));
     }
 
     /**
