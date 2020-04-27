@@ -13,8 +13,8 @@ public class CalculateNumbers {
     private List<Integer> collectNumbers(final String numbers) {
         List<Integer> numbersList = new ArrayList<>();
         String[] splitNumbers = numbers.split(" ");
-        for (int i = 0; i < splitNumbers.length; i++) {
-            numbersList.add(Integer.parseInt(splitNumbers[i]));
+        for (String splitNumber : splitNumbers) {
+            numbersList.add(Integer.parseInt(splitNumber));
         }
         return numbersList;
     }
@@ -24,13 +24,13 @@ public class CalculateNumbers {
      * @return two numbers the highest and lowest, the highest always comes first
      */
     public String highestAndLowest(final String numbers) {
-       if (numbers.length() <= 1) {
-           return numbers;
-       }
-       List<Integer> numbersList = collectNumbers(numbers);
-       Collections.sort(numbersList);
-       int highest = numbersList.get(numbersList.size() - 1);
-       int lowest = numbersList.get(0);
-       return highest + " " + lowest;
+        if (numbers.length() <= 1) {
+            return numbers;
+        }
+        List<Integer> numbersList = collectNumbers(numbers);
+        String highest = Integer.toString(Collections.max(numbersList));
+        String lowest = Integer.toString(Collections.min(numbersList));
+        //return highest + " " + lowest;
+        return String.join(" ", highest, lowest);
     }
 }
