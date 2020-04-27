@@ -16,7 +16,6 @@ public class KataTest {
         List<Integer> expectedNumbers = new ArrayList<>();
         expectedNumbers.add(1);
         expectedNumbers.add(2);
-
         List<Integer> actualNumbers = Kata.recoverNumbers("1 2");
 
         assertTrue(expectedNumbers.containsAll(actualNumbers));
