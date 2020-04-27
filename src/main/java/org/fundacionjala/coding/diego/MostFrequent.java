@@ -8,6 +8,12 @@ public final class MostFrequent {
     private MostFrequent() {
     }
 
+    /**
+     * Obtains the count of the most frequent item of an array
+     *
+     * @param inputArray array of integers
+     * @return number of most frequent item
+     */
     public static int countFrequency(final int[] inputArray) {
         if (inputArray == null || inputArray.length == 0) {
             return 0;
