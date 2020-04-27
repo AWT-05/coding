@@ -9,10 +9,10 @@ public final class MostFrequent {
     }
 
     /**
-     * Obtains the count of the most frequent item of an array
+     * Obtains the count of the most frequent item of an array.
      *
-     * @param inputArray array of integers
-     * @return number of most frequent item
+     * @param inputArray array of integers.
+     * @return number of most frequent item.
      */
     public static int countFrequency(final int[] inputArray) {
         if (inputArray == null || inputArray.length == 0) {
