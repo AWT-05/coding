@@ -5,46 +5,43 @@ import org.testng.annotations.Test;
 
 public class MostFrequentTest {
 
+    public static final int[] INPUT_ARRAY = new int[]{3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3};
+    public static final int[] INPUT_FOR_SINGLE = new int[]{13};
+    public static final int EXPECTED_FROM_ARRAY = 5;
+    public static final int EXPECTED_FROM_EMPTY_OR_NULL = 0;
+    public static final int EXPECTED_FROM_SINGLE = 1;
+
     @Test
     public void givenAnArrayOfNumbersGetTheMostFrequentItem() {
-        //given
-        int[] inputArray = new int[]{3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3};
-        int expectedMostFrequent = 5;
         //when
-        int actualMostFrequent = MostFrequent.countFrequency(inputArray);
+        int actualMostFrequent = MostFrequent.countFrequency(INPUT_ARRAY);
         //then
-        assertEquals(actualMostFrequent, expectedMostFrequent);
+        assertEquals(actualMostFrequent, EXPECTED_FROM_ARRAY);
     }
 
     @Test
     public void givenAnEmptyArrayGetTheMostFrequentItemAsZero() {
         //given
         int[] inputArray = new int[]{};
-        int expectedMostFrequent = 0;
         //when
         int actualMostFrequent = MostFrequent.countFrequency(inputArray);
         //then
-        assertEquals(actualMostFrequent, expectedMostFrequent);
+        assertEquals(actualMostFrequent, EXPECTED_FROM_EMPTY_OR_NULL);
     }
 
     @Test
     public void givenANullInputGetTheMostFrequentItemAsZero() {
-        //given
-        int expectedMostFrequent = 0;
         //when
         int actualMostFrequent = MostFrequent.countFrequency(null);
         //then
-        assertEquals(actualMostFrequent, expectedMostFrequent);
+        assertEquals(actualMostFrequent, EXPECTED_FROM_EMPTY_OR_NULL);
     }
 
     @Test
     public void givenAnArrayOfASingleNumberGetTheMostFrequentItem() {
-        //given
-        int[] inputArray = new int[]{13};
-        int expectedMostFrequent = 1;
         //when
-        int actualMostFrequent = MostFrequent.countFrequency(inputArray);
+        int actualMostFrequent = MostFrequent.countFrequency(INPUT_FOR_SINGLE);
         //then
-        assertEquals(actualMostFrequent, expectedMostFrequent);
+        assertEquals(actualMostFrequent, EXPECTED_FROM_SINGLE);
     }
 }
