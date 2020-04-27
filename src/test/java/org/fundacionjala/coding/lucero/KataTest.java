@@ -1,4 +1,4 @@
-package org.fundacionjala.lucero;
+package org.fundacionjala.coding.lucero;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

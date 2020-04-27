@@ -1,4 +1,4 @@
-package org.fundacionjala.lucero;
+package org.fundacionjala.coding.lucero;
 
 import java.util.Arrays;
 import java.util.Collections;
