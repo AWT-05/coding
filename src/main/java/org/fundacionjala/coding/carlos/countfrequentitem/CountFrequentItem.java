@@ -7,7 +7,8 @@ public class CountFrequentItem {
      * @return the number of times that the most frequent item is repeated in an array.
      */
     public int getMostFrequent(final int[] arrayNumbers) {
-        int number = 0, repeated = 0;
+        int number = 0;
+        int repeated = 0;
         for (int arrayNumber : arrayNumbers) {
             number = arrayNumber;
             if (repeated < verifyFrequency(number, arrayNumbers)) {
