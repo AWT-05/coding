@@ -57,4 +57,12 @@ public class KataTest {
 
         assertEquals(actualHighLow, expectedHighLow);
     }
+
+    @Test
+    public void handleNullInputTest() {
+        String expectedHighLow = "";
+        String actualHighLow = Kata.highAndLow(null);
+
+        assertEquals(actualHighLow, expectedHighLow);
+    }
 }
