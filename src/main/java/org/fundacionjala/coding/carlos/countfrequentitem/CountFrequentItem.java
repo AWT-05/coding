@@ -1,21 +1,26 @@
 package org.fundacionjala.coding.carlos.countfrequentitem;
 
 public class CountFrequentItem {
-    public int getMostFrequent(int[] arrayNumbers) {
+
+    /**
+     * @param arrayNumbers to find the most frequent item
+     * @return the number of times that the most frequent item is repeated in an array.
+     */
+    public int getMostFrequent(final int[] arrayNumbers) {
         int number = 0, repeated = 0;
-        for (int i = 0; i < arrayNumbers.length; i++) {
-            number = arrayNumbers[i];
-            if (repeated < verifyFrequensy(number, arrayNumbers)) {
-                repeated = verifyFrequensy(number, arrayNumbers);
+        for (int arrayNumber : arrayNumbers) {
+            number = arrayNumber;
+            if (repeated < verifyFrequency(number, arrayNumbers)) {
+                repeated = verifyFrequency(number, arrayNumbers);
             }
         }
         return repeated;
     }
 
-    private int verifyFrequensy(int number, int[] arrayNumbers) {
+    private int verifyFrequency(final int number, final int[] arrayNumbers) {
         int freqCounter = 0;
-        for (int i = 0; i < arrayNumbers.length; i++) {
-            if (number == arrayNumbers[i]) {
+        for (int arrayNumber : arrayNumbers) {
+            if (number == arrayNumber) {
                 freqCounter++;
             }
         }
