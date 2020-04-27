@@ -19,43 +19,12 @@ public class HighAndLowTest {
     @Test
     public void givenASingleNumberGetHighAndLowWithTheSameValue() {
         //given
-        String numbersInput = "3";
+        String numbersInput = "13";
         String highestAndLowestActual = HighAndLow.highestAndLowest(numbersInput);
         //when
-        String highestAndLowestExpected = "3 3";
+        String highestAndLowestExpected = "13 13";
         //then
         assertEquals(highestAndLowestActual, highestAndLowestExpected);
     }
 
-    @Test
-    public void givenAnOnlySpacesInputGetHighAndLowWithZero() {
-        //given
-        String numbersInput = "     ";
-        String highestAndLowestActual = HighAndLow.highestAndLowest(numbersInput);
-        //when
-        String highestAndLowestExpected = "2147483647 -2147483648";
-        //then
-        assertEquals(highestAndLowestActual, highestAndLowestExpected);
-    }
-
-    @Test
-    public void givenAnEmptyInputGetHighAndLowWithZero() {
-        //given
-        String numbersInput = "";
-        String highestAndLowestActual = HighAndLow.highestAndLowest(numbersInput);
-        //when
-        String highestAndLowestExpected = "2147483647 -2147483648";
-        //then
-        assertEquals(highestAndLowestActual, highestAndLowestExpected);
-    }
-
-    @Test
-    public void givenANullInputGetHighAndLowWithZero() {
-        //given
-        String highestAndLowestActual = HighAndLow.highestAndLowest(null);
-        //when
-        String highestAndLowestExpected = "2147483647 -2147483648";
-        //then
-        assertEquals(highestAndLowestActual, highestAndLowestExpected);
-    }
 }
