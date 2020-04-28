@@ -14,16 +14,7 @@ public final class HighAndLow {
     public static String highestAndLowest(final String numbers) {
         int highestNumber = Integer.MIN_VALUE;
         int lowestNumber = Integer.MAX_VALUE;
-        String joinDefault = String.join(" ",
-                Integer.toString(Integer.MAX_VALUE),
-                Integer.toString(Integer.MIN_VALUE));
-        if (numbers == null || numbers.isEmpty()) {
-            return joinDefault;
-        }
         String[] numbersArray = numbers.split(" ");
-        if (numbersArray.length < 1) {
-            return joinDefault;
-        }
         for (String number : numbersArray) {
             highestNumber = Math.max(Integer.parseInt(number),
                     highestNumber);
