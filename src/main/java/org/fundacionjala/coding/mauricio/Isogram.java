@@ -1,20 +1,27 @@
 package org.fundacionjala.coding.mauricio;
 
-public class Isogram {
+public final class Isogram {
 
-    public static boolean stringIsogram(final String word) {
+    private Isogram() {
+    }
+
+    public static boolean validateIsogram(final String word) {
+
+        boolean result = false;
         if (word.length() == 0) {
-            return true;
+            result = true;
         }
 
-        for (int i = 0; i <= word.length(); i++) {
-            for (int j = 0; j <= word.length(); j++) {
+        for (int i = 0; i < word.length(); i++) {
+            for (int j = 0; j < word.length(); j++) {
                 if ((word.charAt(i) == word.charAt(j)) && (i != j)) {
-                    return true;
+                    result = false;
+                    return result;
+                } else {
+                    result = true;
                 }
             }
         }
-
-        return false;
+        return result;
     }
 }

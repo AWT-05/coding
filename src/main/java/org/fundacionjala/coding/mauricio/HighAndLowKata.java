@@ -1,39 +1,43 @@
 package org.fundacionjala.coding.mauricio;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public final class HighAndLowKata {
 
-    public static List<Integer> convertToNumbers(final String input_data) {
+    public static List<Integer> convertToNumbers(final String inputData) {
         List<Integer> numbersArray = new ArrayList<>();
-        String[] chars_split = input_data.split(" ");
-        for (String number : chars_split) {
+        String[] charsSplit = inputData.split(" ");
+        for (String number : charsSplit) {
             numbersArray.add(Integer.parseInt(number));
         }
         return numbersArray;
 
     }
+
     public static List<Integer> recoverNumbers(final String data) {
         Stream<Integer> numbers = Arrays.stream(data.split(" "))
                 .map(Integer::parseInt);
         return numbers.collect(Collectors.toList());
     }
 
-    public String highestAndLowest(final String input_numbers) {
+    public String highestAndLowest(final String inputNumbers) {
         String high;
         String low;
-        if (numbers == null || numbers.isEmpty()) {
+        if (inputNumbers == null || inputNumbers.isEmpty()) {
             return "Null";
         }
-        if (numbers.isEmpty()) {
+        if (inputNumbers.isEmpty()) {
             return "Empty";
         }
-        if (input_numbers.length() <= 1) {
-            return input_numbers;
+        if (inputNumbers.length() <= 1) {
+            return inputNumbers;
         }
-        List<Integer> numbersList = convertToNumbers(input_numbers);
+        List<Integer> numbersList = convertToNumbers(inputNumbers);
         int highest = Collections.max(numbersList);
         int lowest = Collections.min(numbersList);
         return String.join(" ",
