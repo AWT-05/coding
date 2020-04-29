@@ -23,21 +23,21 @@ public class IsogramsTest {
     }
 
     @Test
-    public void notIsIsogramsTest() {
+    public void isNotIsogramsTest() {
         boolean result = isIsogram("aba");
 
         assertFalse(result);
     }
 
     @Test
-    public void notIsIsogramsInsensitiveCaseTest() {
+    public void isNotIsogramsInsensitiveCaseTest() {
         boolean result = isIsogram("moOse");
 
         assertFalse(result);
     }
 
     @Test
-    public void notIsIsogramsWhenNumbersTest() {
+    public void isNotIsogramsWhenNumbersTest() {
         boolean result = isIsogram("Dermatoglyphics1");
 
         assertFalse(result);
