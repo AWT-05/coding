@@ -13,12 +13,11 @@ public final class Isograms {
         if (word.length() == 0) {
             return true;
         }
-
-        Set<String> wordSet = Arrays.stream(word.toLowerCase().split("")).collect(Collectors.toSet());
-
-        if (wordSet.stream().anyMatch(s -> s.matches(".*\\d.*"))) {
+        if (word.chars().anyMatch(Character::isDigit)) {
             return false;
         }
+        Set<String> wordSet = Arrays.stream(word.toLowerCase().split("")).collect(Collectors.toSet());
+
         return word.length() == wordSet.size();
     }
 }
