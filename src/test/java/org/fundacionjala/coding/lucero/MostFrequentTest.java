@@ -2,16 +2,17 @@ package org.fundacionjala.coding.lucero;
 
 import org.testng.annotations.Test;
 
+import static org.fundacionjala.coding.lucero.MostFrequent.countMostFrequentItem;
 import static org.testng.Assert.assertEquals;
 
-public class KataMostFrequentTest {
+public class MostFrequentTest {
 
     static final int FIVE = 5;
 
     @Test
     public void findCountMostFrequentItemTest() {
         final int[] data = new int[]{3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3};
-        int actualCount = Kata.countMostFrequentItem(data);
+        int actualCount = countMostFrequentItem(data);
 
         assertEquals(actualCount, FIVE);
     }
@@ -19,7 +20,7 @@ public class KataMostFrequentTest {
     @Test
     public void countMostFrequentOneItemTest() {
         int[] data = new int[]{FIVE};
-        int actualCount = Kata.countMostFrequentItem(data);
+        int actualCount = countMostFrequentItem(data);
 
         assertEquals(actualCount, FIVE);
     }
@@ -28,7 +29,7 @@ public class KataMostFrequentTest {
     public void handleEmptyArrayTest() {
         int expectedCount = 0;
         int[] data = new int[]{};
-        int actualCount = Kata.countMostFrequentItem(data);
+        int actualCount = countMostFrequentItem(data);
 
         assertEquals(actualCount, expectedCount);
     }
@@ -36,7 +37,7 @@ public class KataMostFrequentTest {
     @Test
     public void handleNullInputDataTest() {
         int expectedCount = 0;
-        int actualCount = Kata.countMostFrequentItem(null);
+        int actualCount = countMostFrequentItem(null);
 
         assertEquals(actualCount, expectedCount);
     }
