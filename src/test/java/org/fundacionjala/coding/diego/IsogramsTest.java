@@ -1,5 +1,6 @@
 package org.fundacionjala.coding.diego;
 
+import static org.fundacionjala.coding.diego.Isograms.stringIsogram;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
@@ -13,13 +14,13 @@ public class IsogramsTest {
     }
 
     @Test
-    public void givenAnStringWhenIsIsogramThenTrue() {
+    public void givenAnStringWhenIsNotIsogramThenFalse() {
         boolean isIsogram = stringIsogram("aba");
-        assertTrue(isIsogram);
+        assertFalse(isIsogram);
     }
 
     @Test
-    public void givenAnStringWithUpperCaseWhenIsIsogramThenFalse() {
+    public void givenAnStringWithUpperCaseWhenIsIsogramThenTrue() {
         boolean isIsogram = stringIsogram("Dermatoglyphics");
         assertTrue(isIsogram);
     }
