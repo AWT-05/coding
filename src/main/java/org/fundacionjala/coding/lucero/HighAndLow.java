@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public final class Kata {
+public final class HighAndLow {
 
-    private Kata() {
+    private HighAndLow() {
     }
 
     public static List<Integer> recoverNumbers(final String data) {
