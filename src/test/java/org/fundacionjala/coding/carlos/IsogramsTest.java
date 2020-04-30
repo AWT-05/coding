@@ -1,33 +1,33 @@
-package org.fundacionjala.coding.carlos.isisogram;
+package org.fundacionjala.coding.carlos;
 
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-public class StringEvaluatortest {
+public class IsogramsTest {
     @Test
     public void givenAIsogramStringThenDetermineAsTrue() {
         //given
         String data = "Dermatoglyphics";
-        StringEvaluator isogram = new StringEvaluator();
+        Isograms isograms = new Isograms();
         //then
-        assertTrue(isogram.verifyIsogram(data));
+        assertTrue(isograms.verifyIsogram(data));
     }
     @Test
     public void givenAIsogramStringThenDetermineAsFalse() {
         //given
         String data = "basketBall";
-        StringEvaluator isogram = new StringEvaluator();
+        Isograms isograms = new Isograms();
         //then
-        assertFalse(isogram.verifyIsogram(data));
+        assertFalse(isograms.verifyIsogram(data));
     }
     @Test
     public void givenAEmptyIsogramStringThenDetermineAsStrue() {
         //given
         String data = " ";
-        StringEvaluator isogram = new StringEvaluator();
+        Isograms isograms = new Isograms();
         //then
-        assertTrue(isogram.verifyIsogram(data));
+        assertTrue(isograms.verifyIsogram(data));
     }
 }
