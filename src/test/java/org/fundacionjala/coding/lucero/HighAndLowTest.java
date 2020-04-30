@@ -6,18 +6,19 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.fundacionjala.coding.lucero.HighAndLow.highAndLow;
+import static org.fundacionjala.coding.lucero.HighAndLow.recoverNumbers;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class KataTest {
+public class HighAndLowTest {
 
     @Test
     public void recoverNumbersTest() {
         List<Integer> expectedNumbers = new ArrayList<>();
         expectedNumbers.add(1);
         expectedNumbers.add(2);
-
-        List<Integer> actualNumbers = Kata.recoverNumbers("1 2");
+        List<Integer> actualNumbers = recoverNumbers("1 2");
 
         assertTrue(expectedNumbers.containsAll(actualNumbers));
     }
@@ -37,7 +38,7 @@ public class KataTest {
 
     @Test(dataProvider = "data")
     public void highAndLowTest(final String data, final String expectedHighLow) {
-        String actualHighLow = Kata.highAndLow(data);
+        String actualHighLow = highAndLow(data);
 
         assertEquals(actualHighLow, expectedHighLow);
     }
@@ -45,7 +46,7 @@ public class KataTest {
     @Test
     public void getHighLowOfOneNumberTest() {
         String expectedHighLow = "5";
-        String actualHighLow = Kata.highAndLow("5");
+        String actualHighLow = highAndLow("5");
 
         assertEquals(actualHighLow, expectedHighLow);
     }
@@ -53,7 +54,7 @@ public class KataTest {
     @Test
     public void getHighLowOfZeroNumbersTest() {
         String expectedHighLow = "";
-        String actualHighLow = Kata.highAndLow("");
+        String actualHighLow = highAndLow("");
 
         assertEquals(actualHighLow, expectedHighLow);
     }
@@ -61,7 +62,7 @@ public class KataTest {
     @Test
     public void handleNullInputTest() {
         String expectedHighLow = "";
-        String actualHighLow = Kata.highAndLow(null);
+        String actualHighLow = highAndLow(null);
 
         assertEquals(actualHighLow, expectedHighLow);
     }
