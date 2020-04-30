@@ -30,4 +30,12 @@ public class IsogramsTest {
         //then
         assertTrue(isograms.verifyIsogram(data));
     }
+    @Test
+    public void givenAnotherEmptyIsogramStringThenDetermineAsStrue() {
+        //given
+        String data = "";
+        Isograms isograms = new Isograms();
+        //then
+        assertTrue(isograms.verifyIsogram(data));
+    }
 }
