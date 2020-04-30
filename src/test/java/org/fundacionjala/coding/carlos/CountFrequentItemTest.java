@@ -1,4 +1,4 @@
-package org.fundacionjala.coding.carlos.countfrequentitem;
+package org.fundacionjala.coding.carlos;
 
 import org.testng.annotations.Test;
 
