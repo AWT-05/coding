@@ -30,7 +30,6 @@ public class HighestAndLowest {
         List<Integer> numbersList = collectNumbers(numbers);
         String highest = Integer.toString(Collections.max(numbersList));
         String lowest = Integer.toString(Collections.min(numbersList));
-        //return highest + " " + lowest;
         return String.join(" ", highest, lowest);
     }
 }
