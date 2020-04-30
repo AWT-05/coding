@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class HighestAndLowest {
+public class HighestLowest {
 
     /**
      * @param numbers to collect from a given string

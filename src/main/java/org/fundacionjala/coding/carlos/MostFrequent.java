@@ -3,7 +3,7 @@ package org.fundacionjala.coding.carlos;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CountFrequentItem {
+public class MostFrequent {
 
     /**
      * @param arrayNumbers to find the most frequent item
