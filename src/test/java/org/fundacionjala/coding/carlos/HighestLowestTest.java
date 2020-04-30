@@ -1,4 +1,4 @@
-package org.fundacionjala.coding.carlos.highestandlowest;
+package org.fundacionjala.coding.carlos;
 
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
@@ -9,8 +9,8 @@ public class HighestLowestTest {
     public void givenStringOfNumbersWhenCompareThenReceiveTheHighestAndLowest() {
         //given
         String numbers = "2 -5 3 9 4";
-        CalculateNumbers calculateNumbers = new CalculateNumbers();
-        String numbersActual = calculateNumbers.highestAndLowest(numbers);
+        HighestLowest highestLowest = new HighestLowest();
+        String numbersActual = highestLowest.highestAndLowest(numbers);
         //when
         String numbersExpected = "9 -5";
         //then
@@ -20,8 +20,8 @@ public class HighestLowestTest {
     public void givenStringWithNumberWhenCompareThenReceiveTheSameNumber() {
         //given
         String numbers = "7";
-        CalculateNumbers calculateNumbers = new CalculateNumbers();
-        String numbersActual = calculateNumbers.highestAndLowest(numbers);
+        HighestLowest highestLowest = new HighestLowest();
+        String numbersActual = highestLowest.highestAndLowest(numbers);
         //when
         String numbersExpected = "7";
         //then
@@ -31,8 +31,8 @@ public class HighestLowestTest {
     public void givenAEmptyStringWhenCompareThenReceiveTheSameNumber() {
         //given
         String numbers = " ";
-        CalculateNumbers calculateNumbers = new CalculateNumbers();
-        String numbersActual = calculateNumbers.highestAndLowest(numbers);
+        HighestLowest highestLowest = new HighestLowest();
+        String numbersActual = highestLowest.highestAndLowest(numbers);
         //when
         String numbersExpected = " ";
         //then

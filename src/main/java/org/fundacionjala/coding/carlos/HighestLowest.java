@@ -1,10 +1,10 @@
-package org.fundacionjala.coding.carlos.highestandlowest;
+package org.fundacionjala.coding.carlos;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CalculateNumbers {
+public class HighestLowest {
 
     /**
      * @param numbers to collect from a given string
