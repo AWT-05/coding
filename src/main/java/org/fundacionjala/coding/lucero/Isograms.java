@@ -1,6 +1,9 @@
 package org.fundacionjala.coding.lucero;
 
+import java.util.stream.IntStream;
+
 public final class Isograms {
+
     private Isograms() {
     }
 
@@ -9,10 +12,8 @@ public final class Isograms {
             return true;
         }
 
-        return word.toLowerCase()
-                   .chars()
-                   .distinct()
-                   .filter(Character::isAlphabetic)
-                   .count() == word.length();
+        IntStream isogramCandidate = word.toLowerCase().chars().distinct().filter(Character::isAlphabetic);
+
+        return isogramCandidate.count() == word.length();
     }
 }
