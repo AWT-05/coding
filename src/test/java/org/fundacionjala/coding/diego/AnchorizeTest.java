@@ -11,7 +11,7 @@ public class AnchorizeTest {
         String uri = "hello FTP://world.com !";
         //when
         String expectedAnchorString = "hello <a href=\"FTP://world.com\">FTP://world.com</a> !";
-        String actualAnchorString = anchor(uri);
+        String actualAnchorString = anchorUri(uri);
         //then
         assertEquals(actualAnchorString,expectedAnchorString);
     }
@@ -22,7 +22,7 @@ public class AnchorizeTest {
         String uri = "hello http://world.com !";
         //when
         String expectedAnchorString = "hello <a href=\"http://world.com\">http://world.com</a> !";
-        String actualAnchorString = anchor(uri);
+        String actualAnchorString = anchorUri(uri);
         //then
         assertEquals(actualAnchorString,expectedAnchorString);
     }
