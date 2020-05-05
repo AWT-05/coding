@@ -1,5 +1,6 @@
 package org.fundacionjala.coding.diego;
 
+import static org.fundacionjala.coding.diego.Anchorize.anchorUri;
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
@@ -13,7 +14,7 @@ public class AnchorizeTest {
         String expectedAnchorString = "hello <a href=\"FTP://world.com\">FTP://world.com</a> !";
         String actualAnchorString = anchorUri(uri);
         //then
-        assertEquals(actualAnchorString,expectedAnchorString);
+        assertEquals(actualAnchorString, expectedAnchorString);
     }
 
     @Test
@@ -24,6 +25,6 @@ public class AnchorizeTest {
         String expectedAnchorString = "hello <a href=\"http://world.com\">http://world.com</a> !";
         String actualAnchorString = anchorUri(uri);
         //then
-        assertEquals(actualAnchorString,expectedAnchorString);
+        assertEquals(actualAnchorString, expectedAnchorString);
     }
 }
